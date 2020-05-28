@@ -1,0 +1,19 @@
+{
+  "name": "testing_knex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start-dev": "nodemon --inspect src/server.js",
+    "reset-db": "npx knex migrate:rollback --all && npx knex migrate:latest && npx knex seed:run"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "mysql2": "^2.1.0"
+  }
+}
